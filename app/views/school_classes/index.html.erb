@@ -1,0 +1,4 @@
+<% @school_classes.each do |school_class| %>
+    <%= link_to school_class.title, @school_class %>
+    <%= link_to school_class.room_number, @school_class %>
+<% end %>
