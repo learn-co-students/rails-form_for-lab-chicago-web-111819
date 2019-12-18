@@ -1,0 +1,6 @@
+<h3>Student Form</h3>
+
+<%= form_for(@student) do |f| %>
+  <%= render(:partial => 'form_fields', :locals => {:f => f}) %>
+  <%= f.submit %>
+<% end %>

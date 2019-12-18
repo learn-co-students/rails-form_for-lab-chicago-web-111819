@@ -1,0 +1,30 @@
+<%= form_for(@school_class) do |f| %>
+  <label>Title:</label><br>
+  <%= f.text_field :title %><br>
+ 
+  <label>Room number</label><br>
+  <%= f.text_field :room_number %><br>
+ 
+  <%= f.submit %>
+<% end %>
+
+<%= form_tag school_classes_path do %>
+  <label>Title:</label><br>
+  <%= text_field_tag :title %><br>
+ 
+  <label>Room Number:</label><br>
+  <%= text_field_tag :room_number %><br>
+ 
+  <%= submit_tag "Create School class" %>
+<% end %>
+
+
+<%= form_with model: @school_class do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, id: :title %>
+
+  <%= f.label "Room Number" %>
+  <%= f.text_field :room_number, id: :room_number %>
+
+  <%= f.submit "Create School class" %>
+<% end %>
